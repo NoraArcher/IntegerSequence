@@ -6,6 +6,8 @@ public class DriverIntSeq {
     IntegerSequence b = new Range(1,1);
     IntegerSequence c = new Range(0,3);
     IntegerSequence d = new Range(-8, -2);
+    int[] nums = {1, 3, 5, 0, -1, 3, 9};
+    IntegerSequence e = new ArraySequence(nums);
     //IntegerSequence e = new Range(45, 20);
 
     System.out.println("\nDecember 3rd Tests");
@@ -45,7 +47,10 @@ public class DriverIntSeq {
 
     System.out.println("\nDecember 7th Tests");
     if (true) {
-      System.out.println();
+      System.out.println("ArraySequence(array):");
+      while(e.hasNext()) {
+        System.out.print(e.next()+", ");
+      }
     }
 
   }//end of main
