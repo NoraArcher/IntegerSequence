@@ -4,9 +4,13 @@ public class Range implements IntegerSequence {
   private int start,end,current;
 
   public Range(int a, int b) {
-    start = a;
-    end = b;
-    current = a;
+    if (a > b) {
+      throw new IndexOutOfBoundsException();
+    } else {
+      start = a;
+      end = b;
+      current = a;
+    }
   }
 
   public void reset() {
